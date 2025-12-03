@@ -101,7 +101,7 @@ workflows:
       - gradle-test:
           matrix:
             parameters:
-              jdk: << pipeline.parameters.java_versions >>
+              jdk: [<< pipeline.parameters.java_versions >>]
       - code-quality:
           requires:
             - gradle-test
